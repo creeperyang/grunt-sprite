@@ -40,6 +40,15 @@
 <div class="highlight highlight-js"><pre>grunt.loadNpmTasks(<span class="pl-s"><span class="pl-pds">'</span>grunt-image-sprite<span class="pl-pds">'</span></span>);</pre></div>
 
 <h2>
+<a id="more-about-instalation" class="anchor" href="#more-about-instalation" aria-hidden="true"><span class="octicon octicon-link"></span></a>More about instalation</h2>
+
+<p>The plugin depend on <code>imagemagick</code>. ImageMagick is a software suite to create, edit, compose, or convert bitmap images. You can goto <a href="http://www.imagemagick.org/">http://www.imagemagick.org/</a> for details.</p>
+
+<p>If your os is <code>Ubuntu|Mac os</code>, when you run <code>npm install grunt-image-sprite</code>, script will automatically install <code>imagemagick</code>.</p>
+
+<p>If you use windows and other os, or the instalation failed, please install <code>imagemagick</code> manually. Goto <a href="http://www.imagemagick.org/script/binary-releases.php">http://www.imagemagick.org/script/binary-releases.php</a> for details.</p>
+
+<h2>
 <a id="the-image_sprite-task" class="anchor" href="#the-image_sprite-task" aria-hidden="true"><span class="octicon octicon-link"></span></a>The "image_sprite" task</h2>
 
 <h3>
@@ -139,7 +148,7 @@ Default value: <code>''</code></p>
     sprite<span class="pl-k">:</span> {
       options<span class="pl-k">:</span> {
         <span class="pl-s"><span class="pl-pds">'</span>vertical<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-c1">true</span>,
-        <span class="pl-s"><span class="pl-pds">'</span>cssFile<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>sprite.css<span class="pl-pds">'</span></span>
+        <span class="pl-s"><span class="pl-pds">'</span>cssFile<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>sprite.css<span class="pl-pds">'</span></span> <span class="pl-c">// 'sprite.less' is also allowed</span>
       },
       files<span class="pl-k">:</span> {
         <span class="pl-s"><span class="pl-pds">'</span>tmp/sprite.png<span class="pl-pds">'</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>test/fixtures/*.png<span class="pl-pds">'</span></span>]
@@ -148,11 +157,11 @@ Default value: <code>''</code></p>
   },
 })</pre></div>
 
-<p>Use sprite inside your project, some more work:</p>
+<p><strong>Use sprite inside your project, some more work:</strong></p>
 
 <ol>
 <li>
-<p>add some more style code:</p>
+<p>add css/less code bellow:</p>
 
 <div class="highlight highlight-css"><pre><span class="pl-k">@import</span> <span class="pl-c1">url</span>(<span class="pl-s"><span class="pl-pds">'</span>tmp/sprite.css<span class="pl-pds">'</span></span>);
 
@@ -162,7 +171,7 @@ Default value: <code>''</code></p>
   <span class="pl-c1"><span class="pl-c1">background-repeat</span></span>: <span class="pl-c1">no-repeat</span>;
 }</pre></div>
 </li>
-<li><p>make sure css file path and sprite image path is right.</p></li>
+<li><p>make sure css/less file path and sprite image path are right. Include css file in your html.</p></li>
 <li>
 <p>Finally you can write something like this:</p>
 
