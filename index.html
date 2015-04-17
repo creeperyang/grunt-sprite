@@ -1,34 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
+    <meta charset="UTF-8">
     <title>Grunt-sprite by creeperyang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
-    <header>
-      <div class="inner">
-        <h1>Grunt-sprite</h1>
-        <h2>A grunt plugin to generate css sprite.</h2>
-        <a href="https://github.com/creeperyang/grunt-sprite" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
+    <section class="page-header">
+      <h1 class="project-name">Grunt-sprite</h1>
+      <h2 class="project-tagline">A grunt plugin to generate css sprite.</h2>
+      <a href="https://github.com/creeperyang/grunt-sprite" class="btn">View on GitHub</a>
+      <a href="https://github.com/creeperyang/grunt-sprite/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/creeperyang/grunt-sprite/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
+    <section class="main-content">
+      <h1>
 <a id="grunt-image-sprite" class="anchor" href="#grunt-image-sprite" aria-hidden="true"><span class="octicon octicon-link"></span></a>grunt-image-sprite</h1>
 
 <blockquote>
@@ -71,20 +62,64 @@
 <a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h3>
 
 <h4>
-<a id="optionsseparator" class="anchor" href="#optionsseparator" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.separator</h4>
+<a id="optionsvertical" class="anchor" href="#optionsvertical" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.vertical</h4>
 
-<p>Type: <code>String</code>
-Default value: <code>',  '</code></p>
+<p>Type: <code>Boolean</code>
+Default value: <code>true</code></p>
 
-<p>A string value that is used to do something with whatever.</p>
+<p>A boolean value that is used to specify orientation of icons.</p>
 
 <h4>
-<a id="optionspunctuation" class="anchor" href="#optionspunctuation" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.punctuation</h4>
+<a id="optionsmargin" class="anchor" href="#optionsmargin" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.margin</h4>
+
+<p>Type: <code>Number</code>
+Default value: <code>0</code></p>
+
+<p>A number value that is used to specify margin(icon's gap).</p>
+
+<h4>
+<a id="optionsprefix" class="anchor" href="#optionsprefix" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.prefix</h4>
 
 <p>Type: <code>String</code>
-Default value: <code>'.'</code></p>
+Default value: <code>'icon'</code></p>
 
-<p>A string value that is used to do something else with whatever else.</p>
+<p>A string value that is used as class name's prefix when generate css file.</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-e">.icon-angle-down-suffix</span> {
+// '<span class="pl-c1"><span class="pl-c1">icon</span></span>' <span class="pl-c1">is</span> <span class="pl-c1">the</span> <span class="pl-c1">prefix</span>, '<span class="pl-c1">-</span>' <span class="pl-c1">is</span> <span class="pl-c1">the</span> <span class="pl-c1">connector</span>, '<span class="pl-c1">andle-<span class="pl-c1">down</span></span>' <span class="pl-c1">is</span> <span class="pl-c1">automatically</span> <span class="pl-c1">generated</span> <span class="pl-c1">from</span> <span class="pl-c1">file</span>'<span class="pl-c1">s</span> <span class="pl-c1"><span class="pl-c1">name</span></span>, '<span class="pl-c1">suffix</span>' <span class="pl-c1">is</span> <span class="pl-c1">the</span> <span class="pl-c1">suffix</span>.
+}</pre></div>
+
+<h4>
+<a id="optionsconnector" class="anchor" href="#optionsconnector" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.connector</h4>
+
+<p>Type: <code>String</code>
+Default value: <code>'-'</code></p>
+
+<p>A string value that is used as connector when generate css file.</p>
+
+<h4>
+<a id="optionssuffix" class="anchor" href="#optionssuffix" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.suffix</h4>
+
+<p>Type: <code>String</code>
+Default value: <code>''</code></p>
+
+<p>A string value that is used as class name's suffix when generate css file.</p>
+
+<h4>
+<a id="optionscsspath" class="anchor" href="#optionscsspath" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.cssPath</h4>
+
+<p>Type: <code>String</code>
+Default value: <code>''</code></p>
+
+<p>A string value that is used to specify css file's path</p>
+
+<h4>
+<a id="optionscssfile" class="anchor" href="#optionscssfile" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.cssFile</h4>
+
+<p>Type: <code>String|Function</code>
+Default value: <code>''</code></p>
+
+<p>A string/function value that is used to specify css file's name. If it is set to function, the generated sprite image's path will be passed as argument.</p>
 
 <h3>
 <a id="usage-examples" class="anchor" href="#usage-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage Examples</h3>
@@ -92,33 +127,48 @@ Default value: <code>'.'</code></p>
 <h4>
 <a id="default-options" class="anchor" href="#default-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Default Options</h4>
 
-<p>In this example, the default options are used to do something with whatever. So if the <code>testing</code> file has the content <code>Testing</code> and the <code>123</code> file had the content <code>1 2 3</code>, the generated result would be <code>Testing, 1 2 3.</code></p>
-
-<div class="highlight highlight-js"><pre>grunt.initConfig({
-  image_sprite<span class="pl-k">:</span> {
-    options<span class="pl-k">:</span> {},
-    files<span class="pl-k">:</span> {
-      <span class="pl-s"><span class="pl-pds">'</span>dest/default_options<span class="pl-pds">'</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>src/testing<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>src/123<span class="pl-pds">'</span></span>],
-    },
-  },
-})</pre></div>
-
-<h4>
-<a id="custom-options" class="anchor" href="#custom-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom Options</h4>
-
-<p>In this example, custom options are used to do something else with whatever else. So if the <code>testing</code> file has the content <code>Testing</code> and the <code>123</code> file had the content <code>1 2 3</code>, the generated result in this case would be <code>Testing: 1 2 3 !!!</code></p>
+<p>Run command <code>grunt image_sprite</code>, you will get the <code>tmp/sprite.png</code> and <code>tmp/sprite.css</code>.</p>
 
 <div class="highlight highlight-js"><pre>grunt.initConfig({
   image_sprite<span class="pl-k">:</span> {
     options<span class="pl-k">:</span> {
-      separator<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>: <span class="pl-pds">'</span></span>,
-      punctuation<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span> !!!<span class="pl-pds">'</span></span>,
+      <span class="pl-s"><span class="pl-pds">'</span>cssPath<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>tmp<span class="pl-pds">'</span></span>,
+      <span class="pl-s"><span class="pl-pds">'</span>vertical<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-c1">true</span>,
+      <span class="pl-s"><span class="pl-pds">'</span>margin<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-c1">2</span>
     },
-    files<span class="pl-k">:</span> {
-      <span class="pl-s"><span class="pl-pds">'</span>dest/default_options<span class="pl-pds">'</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>src/testing<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>src/123<span class="pl-pds">'</span></span>],
-    },
+    sprite<span class="pl-k">:</span> {
+      options<span class="pl-k">:</span> {
+        <span class="pl-s"><span class="pl-pds">'</span>vertical<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        <span class="pl-s"><span class="pl-pds">'</span>cssFile<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>sprite.css<span class="pl-pds">'</span></span>
+      },
+      files<span class="pl-k">:</span> {
+        <span class="pl-s"><span class="pl-pds">'</span>tmp/sprite.png<span class="pl-pds">'</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>test/fixtures/*.png<span class="pl-pds">'</span></span>]
+      }
+    }
   },
 })</pre></div>
+
+<p>Use sprite inside your project, some more work:</p>
+
+<ol>
+<li>
+<p>add some more style code:</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-k">@import</span> <span class="pl-c1">url</span>(<span class="pl-s"><span class="pl-pds">'</span>tmp/sprite.css<span class="pl-pds">'</span></span>);
+
+<span class="pl-e">.icon</span> {
+  <span class="pl-c1"><span class="pl-c1">display</span></span>: <span class="pl-c1">inline-block</span>; // <span class="pl-c1">block</span>;
+  <span class="pl-c1"><span class="pl-c1">background-image</span></span>: <span class="pl-c1">url</span>(<span class="pl-s"><span class="pl-pds">'</span>tmp/sprite.png<span class="pl-pds">'</span></span>);
+  <span class="pl-c1"><span class="pl-c1">background-repeat</span></span>: <span class="pl-c1">no-repeat</span>;
+}</pre></div>
+</li>
+<li><p>make sure css file path and sprite image path is right.</p></li>
+<li>
+<p>Finally you can write something like this:</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">i</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">'</span>icon icon-angle-down<span class="pl-pds">'</span></span>&gt;&lt;/<span class="pl-ent">i</span>&gt;</pre></div>
+</li>
+</ol>
 
 <h2>
 <a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
@@ -128,31 +178,22 @@ Default value: <code>'.'</code></p>
 <h2>
 <a id="release-history" class="anchor" href="#release-history" aria-hidden="true"><span class="octicon octicon-link"></span></a>Release History</h2>
 
-<p><em>(Nothing yet)</em></p>
+<p>2015-04-17 <code>v0.0.1</code> 初始版本</p>
 
 <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p>Copyright (c) 2015 creeperyang. Licensed under the MIT license.</p>
-        </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/creeperyang/grunt-sprite/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/creeperyang/grunt-sprite/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/creeperyang/grunt-sprite">Grunt-sprite</a> is maintained by <a href="https://github.com/creeperyang">creeperyang</a>.</span>
 
-          <p class="repo-owner"><a href="https://github.com/creeperyang/grunt-sprite"></a> is maintained by <a href="https://github.com/creeperyang">creeperyang</a>.</p>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
 
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
+    </section>
 
   
   </body>
 </html>
+
