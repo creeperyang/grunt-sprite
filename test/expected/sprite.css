@@ -1,0 +1,65 @@
+.icon-app {
+    background-position: -2px -2px;
+    width: 35px;
+    height: 35px;
+}
+.icon-back {
+    background-position: -2px -39px;
+    width: 9px;
+    height: 17px;
+}
+.icon-game {
+    background-position: -2px -58px;
+    width: 35px;
+    height: 35px;
+}
+.icon-more {
+    background-position: -2px -95px;
+    width: 6px;
+    height: 10px;
+}
+.icon-next-double-disable {
+    background-position: -2px -107px;
+    width: 13px;
+    height: 13px;
+}
+.icon-next-double {
+    background-position: -2px -122px;
+    width: 13px;
+    height: 13px;
+}
+.icon-play {
+    background-position: -2px -137px;
+    width: 75px;
+    height: 75px;
+}
+.icon-previous-double-disable {
+    background-position: -2px -214px;
+    width: 13px;
+    height: 13px;
+}
+.icon-previous-double {
+    background-position: -2px -229px;
+    width: 13px;
+    height: 13px;
+}
+.icon-search {
+    background-position: -2px -244px;
+    width: 22px;
+    height: 22px;
+}
+.icon-tip {
+    background-position: -2px -268px;
+    width: 21px;
+    height: 19px;
+}
+.icon-triangle-down {
+    background-position: -2px -289px;
+    width: 10px;
+    height: 6px;
+}
+.icon-video {
+    background-position: -2px -297px;
+    width: 35px;
+    height: 35px;
+}
