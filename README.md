@@ -17,6 +17,14 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-image-sprite');
 ```
 
+## More about instalation
+
+The plugin depend on `imagemagick`. ImageMagick is a software suite to create, edit, compose, or convert bitmap images. You can goto <http://www.imagemagick.org/> for details.
+
+If your os is `Ubuntu|Mac os`, when you run `npm install grunt-image-sprite`, script will automatically install `imagemagick`.
+
+If you use windows and other os, or the instalation failed, please install `imagemagick` manually. Goto <http://www.imagemagick.org/script/binary-releases.php> for details.
+
 ## The "image_sprite" task
 
 ### Overview
@@ -101,7 +109,7 @@ grunt.initConfig({
     sprite: {
       options: {
         'vertical': true,
-        'cssFile': 'sprite.css'
+        'cssFile': 'sprite.css' // 'sprite.less' is also allowed
       },
       files: {
         'tmp/sprite.png': ['test/fixtures/*.png']
@@ -111,9 +119,9 @@ grunt.initConfig({
 })
 ```
 
-Use sprite inside your project, some more work:
+**Use sprite inside your project, some more work:**
 
-1. add some more style code:
+1. add css/less code bellow:
 
   ```css
   @import url('tmp/sprite.css');
@@ -125,7 +133,7 @@ Use sprite inside your project, some more work:
   }
   ```
 
-2. make sure css file path and sprite image path is right.
+2. make sure css/less file path and sprite image path are right. Include css file in your html.
 3. Finally you can write something like this:
 
   ```html
