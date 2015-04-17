@@ -37,56 +37,106 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
+#### options.vertical
+Type: `Boolean`
+Default value: `true`
+
+A boolean value that is used to specify orientation of icons.
+
+#### options.margin
+Type: `Number`
+Default value: `0`
+
+A number value that is used to specify margin(icon's gap).
+
+#### options.prefix
 Type: `String`
-Default value: `',  '`
+Default value: `'icon'`
 
-A string value that is used to do something with whatever.
+A string value that is used as class name's prefix when generate css file.
 
-#### options.punctuation
+```css
+.icon-angle-down-suffix {
+// 'icon' is the prefix, '-' is the connector, 'andle-down' is automatically generated from file's name, 'suffix' is the suffix.
+}
+```
+
+#### options.connector
 Type: `String`
-Default value: `'.'`
+Default value: `'-'`
 
-A string value that is used to do something else with whatever else.
+A string value that is used as connector when generate css file.
+
+#### options.suffix
+Type: `String`
+Default value: `''`
+
+A string value that is used as class name's suffix when generate css file.
+
+#### options.cssPath
+Type: `String`
+Default value: `''`
+
+A string value that is used to specify css file's path
+
+#### options.cssFile
+Type: `String|Function`
+Default value: `''`
+
+A string/function value that is used to specify css file's name. If it is set to function, the generated sprite image's path will be passed as argument.
 
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  image_sprite: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+Run command `grunt image_sprite`, you will get the `tmp/sprite.png` and `tmp/sprite.css`.
 
 ```js
 grunt.initConfig({
   image_sprite: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
+      'cssPath': 'tmp',
+      'vertical': true,
+      'margin': 2
     },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
+    sprite: {
+      options: {
+        'vertical': true,
+        'cssFile': 'sprite.css'
+      },
+      files: {
+        'tmp/sprite.png': ['test/fixtures/*.png']
+      }
+    }
   },
 })
 ```
+
+Use sprite inside your project, some more work:
+
+1. add some more style code:
+
+  ```css
+  @import url('tmp/sprite.css');
+
+  .icon {
+    display: inline-block; // block;
+    background-image: url('tmp/sprite.png');
+    background-repeat: no-repeat;
+  }
+  ```
+
+2. make sure css file path and sprite image path is right.
+3. Finally you can write something like this:
+
+  ```html
+  <i class='icon icon-angle-down'></i>
+  ```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+2015-04-17 `v0.0.1` 初始版本
 
 ## License
 Copyright (c) 2015 creeperyang. Licensed under the MIT license.
