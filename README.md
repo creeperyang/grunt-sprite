@@ -119,32 +119,30 @@ grunt.initConfig({
 })
 ```
 
-**Use sprite inside your project, some more work:**
+**Use sprite inside your project, you need some more work:**
 
 1. add css/less code bellow:
+    ```css
+    @import url('tmp/sprite.css');
 
-  ```css
-  @import url('tmp/sprite.css');
-
-  .icon {
-    display: inline-block; // block;
-    background-image: url('tmp/sprite.png');
-    background-repeat: no-repeat;
-  }
-  ```
-
+    .icon {
+      display: inline-block; // block;
+      background-image: url('tmp/sprite.png');
+      background-repeat: no-repeat;
+    }
+    ```
 2. make sure css/less file path and sprite image path are right. Include css file in your html.
 3. Finally you can write something like this:
-
-  ```html
-  <i class='icon icon-angle-down'></i>
-  ```
+    
+    ```html
+    <i class='icon icon-angle-down'></i>
+    ```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-2015-04-17 `v0.0.1` 初始版本
+2015-04-17&nbsp;&nbsp;&nbsp;&nbsp;`v0.0.1`&nbsp;&nbsp;&nbsp;&nbsp;初始版本
 
 ## License
 Copyright (c) 2015 creeperyang. Licensed under the MIT license.
