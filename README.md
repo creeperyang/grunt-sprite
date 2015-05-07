@@ -45,6 +45,16 @@ grunt.initConfig({
 
 ### Options
 
+#### options.retina
+Type: `Boolean|Function`
+Default value: `false`
+
+A value that is used to enable/disable retina feature.
+
+If setted to `true`, when iterating all images, the image whose path is like `name@2x.ext` or `dir@2x/name.ext` will be taked as the retina image.
+
+If setted to a function, the image path will be passed to the function as argument and the function should return a boolean value. Then, if the returned value is `true`, the plugin will take the image as retina image.
+
 #### options.vertical
 Type: `Boolean`
 Default value: `true`
@@ -119,7 +129,9 @@ grunt.initConfig({
 })
 ```
 
-**Use sprite inside your project, you need some more work:**
+**How to use the generated sprite style inside your project?**
+
+If you use `v0.0.1`, you need some more work: 
 
 1. add css/less code bellow:
     ```css
@@ -138,11 +150,16 @@ grunt.initConfig({
     <i class='icon icon-angle-down'></i>
     ```
 
+**Otherwise(from `v0.1.0`)**, you can just include the generated style file and write `<i class='icon icon-angle-down'></i>`.
+
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-2015-04-17&nbsp;&nbsp;&nbsp;&nbsp;`v0.0.1`&nbsp;&nbsp;&nbsp;&nbsp;初始版本
+2015-04-17&nbsp;&nbsp;&nbsp;&nbsp;`v0.1.0`&nbsp;&nbsp;&nbsp;&nbsp;support retina;enhanced style file
+
+2015-04-17&nbsp;&nbsp;&nbsp;&nbsp;`v0.0.1`&nbsp;&nbsp;&nbsp;&nbsp;init
 
 ## License
 Copyright (c) 2015 creeperyang. Licensed under the MIT license.
