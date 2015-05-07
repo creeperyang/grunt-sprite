@@ -27,6 +27,15 @@ exports.image_sprite = {
     // setup here if necessary
     done();
   },
+  sprite_retina: function (test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/sprite@2x.png');
+    var expected = grunt.file.read('test/expected/sprite@2x.png');
+    test.equal(actual, expected, 'should be the same.');
+
+    test.done();
+  },
   sprite: function (test) {
     test.expect(1);
 

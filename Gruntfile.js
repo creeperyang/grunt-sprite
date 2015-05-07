@@ -36,15 +36,16 @@ module.exports = function (grunt) {
       options: {
         'cssPath': 'tmp',
         'vertical': true,
-        'margin': 2
+        'margin': 12
       },
       sprite: {
         options: {
-          'vertical': true,
-          'cssFile': 'sprite.css'
+          'vertical': false,
+          'cssFile': 'sprite.css',
+          'retina': true
         },
         files: {
-          'tmp/sprite.png': ['test/fixtures/*.png']
+          'tmp/sprite.png': ['test/fixtures/*.png', 'test/fixtures/@2x/*.png']
         }
       }
     },

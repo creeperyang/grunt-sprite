@@ -1,65 +1,76 @@
+/*
+ * Make sure sprite image path is correct.
+ * Here we just assume the path is: "placeholder.png".
+ * So correct it if you want the css/less file works.
+ */
+.icon {
+    display: inline-block;
+    background-image: url(sprite.png);
+    background-repeat: no-repeat;
+    background-image: -webkit-image-set(url(sprite.png) 1x, url(sprite@2x.png) 2x);
+}
 .icon-app {
-    background-position: -2px -2px;
+    background-position: -12px -12px;
     width: 35px;
     height: 35px;
 }
 .icon-back {
-    background-position: -2px -39px;
+    background-position: -59px -12px;
     width: 9px;
     height: 17px;
 }
 .icon-game {
-    background-position: -2px -58px;
+    background-position: -80px -12px;
     width: 35px;
     height: 35px;
 }
 .icon-more {
-    background-position: -2px -95px;
+    background-position: -127px -12px;
     width: 6px;
     height: 10px;
 }
 .icon-next-double-disable {
-    background-position: -2px -107px;
+    background-position: -145px -12px;
     width: 13px;
     height: 13px;
 }
 .icon-next-double {
-    background-position: -2px -122px;
+    background-position: -170px -12px;
     width: 13px;
     height: 13px;
 }
 .icon-play {
-    background-position: -2px -137px;
+    background-position: -195px -12px;
     width: 75px;
     height: 75px;
 }
 .icon-previous-double-disable {
-    background-position: -2px -214px;
+    background-position: -282px -12px;
     width: 13px;
     height: 13px;
 }
 .icon-previous-double {
-    background-position: -2px -229px;
+    background-position: -307px -12px;
     width: 13px;
     height: 13px;
 }
 .icon-search {
-    background-position: -2px -244px;
+    background-position: -332px -12px;
     width: 22px;
     height: 22px;
 }
 .icon-tip {
-    background-position: -2px -268px;
+    background-position: -366px -12px;
     width: 21px;
     height: 19px;
 }
 .icon-triangle-down {
-    background-position: -2px -289px;
+    background-position: -399px -12px;
     width: 10px;
     height: 6px;
 }
 .icon-video {
-    background-position: -2px -297px;
+    background-position: -421px -12px;
     width: 35px;
     height: 35px;
 }

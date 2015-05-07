@@ -3,7 +3,7 @@
 var path = require('path');
 var toStr = Object.prototype.toString;
 
-function genSpriteCSS(infoList, vertical, newline, connector, prefix, suffix, margin) {
+function genSpriteCSS(spriteImagePath, infoList, vertical, newline, connector, prefix, suffix, margin) {
     if (toStr.call(infoList) !== '[object Array]') {
         throw new Error('invalid argument:infoList');
     }
@@ -17,7 +17,16 @@ function genSpriteCSS(infoList, vertical, newline, connector, prefix, suffix, ma
     suffix = suffix || '';
     margin = +margin || 0;
 
-    var css = '';
+    var ext = path.extname(spriteImagePath);
+    var css = '/*' + newline + ' * ' + (new Date()).toLocaleString() + 
+        newline + ' * Here is the sprite plugin automatically generated style file.' +
+        newline + ' */' + 
+        newline  + '.' + prefix + ' {' + 
+        newline + '    display: inline-block;' + 
+        newline + '    background-image: url(' + spriteImagePath + ');' + 
+        newline  + '    background-repeat: no-repeat;'  + 
+        newline  + '    background-image: -webkit-image-set(url(' + spriteImagePath + ') 1x, url(' + spriteImagePath.replace(new RegExp('(' + ext + ')' + '$', 'i'), '@2x$1') + ') 2x);'  +
+        newline + '}' + newline;
     var last = margin;
     var left, top, width, height;
     var filename;
