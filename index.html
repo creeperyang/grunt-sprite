@@ -71,6 +71,18 @@
 <a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h3>
 
 <h4>
+<a id="optionsretina" class="anchor" href="#optionsretina" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.retina</h4>
+
+<p>Type: <code>Boolean|Function</code>
+Default value: <code>false</code></p>
+
+<p>A value that is used to enable/disable retina feature.</p>
+
+<p>If setted to <code>true</code>, when iterating all images, the image whose path is like <code>name@2x.ext</code> or <code>dir@2x/name.ext</code> will be taked as the retina image.</p>
+
+<p>If setted to a function, the image path will be passed to the function as argument and the function should return a boolean value. Then, if the returned value is <code>true</code>, the plugin will take the image as retina image.</p>
+
+<h4>
 <a id="optionsvertical" class="anchor" href="#optionsvertical" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.vertical</h4>
 
 <p>Type: <code>Boolean</code>
@@ -157,7 +169,9 @@ Default value: <code>''</code></p>
   },
 })</pre></div>
 
-<p><strong>Use sprite inside your project, you need some more work:</strong></p>
+<p><strong>How to use the generated sprite style inside your project?</strong></p>
+
+<p>If you use <code>v0.0.1</code>, you need some more work: </p>
 
 <ol>
 <li>
@@ -179,6 +193,8 @@ Default value: <code>''</code></p>
 </li>
 </ol>
 
+<p><strong>Otherwise(from <code>v0.1.0</code>)</strong>, you can just include the generated style file and write <code>&lt;i class='icon icon-angle-down'&gt;&lt;/i&gt;</code>.</p>
+
 <h2>
 <a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
 
@@ -187,7 +203,9 @@ Default value: <code>''</code></p>
 <h2>
 <a id="release-history" class="anchor" href="#release-history" aria-hidden="true"><span class="octicon octicon-link"></span></a>Release History</h2>
 
-<p>2015-04-17    <code>v0.0.1</code>    初始版本</p>
+<p>2015-04-17    <code>v0.1.0</code>    support retina;enhanced style file</p>
+
+<p>2015-04-17    <code>v0.0.1</code>    init</p>
 
 <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
