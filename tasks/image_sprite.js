@@ -55,7 +55,7 @@ module.exports = function (grunt) {
         if(err) {
           grunt.log.error(err);
         } else {
-          grunt.log.writeln('Sprite Image "' + dest + '" created.');
+          grunt.log.writeln('Sprite image "' + dest + '" created.');
         }
         if(toStr.call(cb) === '[object Function]') {
           cb(err, dest);
@@ -113,6 +113,15 @@ module.exports = function (grunt) {
         }
       });
 
+      // check paths
+      if(!original.paths.length) {
+        grunt.log.error('Images(1x) not found.');
+        done('Images not found.');
+      } else if(options.retina && !retina.paths.length) {
+        grunt.log.error('Retina images(2x) not found.');
+        done('Retina images not found.');
+      }
+
       // css file path
       cssFile = Object.prototype.toString.call(options.cssFile) === '[object Function]' ? 
         options.cssFile(file.dest) : options.cssFile;
@@ -136,7 +145,7 @@ module.exports = function (grunt) {
             genSprite(original.paths, original.info, file.dest, vertical, margin, function(err, dest) {
               // gen css/less file
               grunt.file.write(cssFile, genSpriteCSS(path.relative('../', path.relative(cssFile, path.resolve(dest))), original.info, vertical, grunt.util.normalizelf('\n'), options.connector, options.prefix, options.suffix, margin));
-              grunt.log.writeln('Css File "' + cssFile + '" created.');
+              grunt.log.writeln('Style file "' + cssFile + '" created.');
               original.done = true;
               finish(err);
             });
