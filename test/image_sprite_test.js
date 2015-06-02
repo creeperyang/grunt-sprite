@@ -48,8 +48,11 @@ exports.image_sprite = {
   style: function (test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/sprite.css');
-    var expected = grunt.file.read('test/expected/sprite.css');
+    var actual = grunt.file.read('tmp/sprite.css')
+      .toString().replace(/^\/\*[^]*\*\//m, '');
+    var expected = grunt.file.read('test/expected/sprite.css')
+      .toString().replace(/^\/\*[^]*\*\//m, '');
+
     test.equal(actual, expected, 'should be the same.');
 
     test.done();

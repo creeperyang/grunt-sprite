@@ -1,12 +1,12 @@
 {
   "name": "grunt-image-sprite",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "convert images to a css sprite image",
   "homepage": "http://creeperyang.github.io/grunt-sprite",
   "author": {
     "name": "creeperyang",
     "email": "pashanhu6@hotmail.com",
-    "url": ""
+    "url": "http://creeperyang.github.io"
   },
    "repository": {
     "type": "git",
